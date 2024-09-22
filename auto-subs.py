@@ -54,7 +54,8 @@ if platform.system() == 'Darwin':
    storagePath = os.path.expandvars("/Library/Application Support/Blackmagic Design/DaVinci Resolve/Fusion/Scripts/Utility/")
 elif platform.system() == 'Linux':
    # Linux
-   storagePath = os.path.expandvars("$HOME/.local/share/DaVinciResolve/Fusion/Scripts/Utility/")
+   storagePath = os.path.expandvars("$HOME/Resolve/auto-sub/")
+   os.makedirs(storagePath, exist_ok=True)
 elif platform.system() == 'Windows':
    # Windows
    storagePath = os.path.expandvars("%APPDATA%\\Blackmagic Design\\DaVinci Resolve\\Support\\Fusion\\Scripts\\Utility\\")
@@ -265,7 +266,8 @@ def OnTranscribe(ev):
    frame_rate = int(timeline.GetSetting("timelineFrameRate")) # get timeline framerate (sometimes returned as string so must cast to int)
 
    # RENDER AUDIO FOR TRANSCRIPTION
-   project.LoadRenderPreset('H.265 Master')
+   # CHANGED PRESET TO DNXHR HQ
+   project.LoadRenderPreset('DNxHR HQ')
    project.SetRenderSettings({"SelectAllFrames": 0, "CustomName": "audio", "TargetDir": storagePath, "AudioCodec": "mp3", "ExportVideo": False, "ExportAudio": True})
    pid = project.AddRenderJob()
 

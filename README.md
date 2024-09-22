@@ -11,6 +11,11 @@ Automatically transcribes your editing timeline using [`OpenAI Whisper`](https:/
 > **Setup and Usage Guides: [AutoSubs Video Tutorial](https://youtu.be/Q-Ud4ZAWH6o?si=EbS32gBrZt6uDF1a) or
 > [Spanish Tutorial](https://youtu.be/cBllp0xjAck?si=KoX7OLGIa6b4lBjh)**
 
+#### THIS IS A MODIFIED VERSION MADE ONLY FOR MORE COMPATIBILITY WITH LINUX 
+#### I'VE NOTICED IT WONT WORK "AS IS" on free version, SO I'VE STARTED THIS FORK
+
+Changes made: Working directory now set on Home
+
 ### Support AutoSubs development:
 [!["Buy Me A Coffee"](https://www.buymeacoffee.com/assets/img/custom_images/orange_img.png)](https://www.buymeacoffee.com/tmoroney)
 
